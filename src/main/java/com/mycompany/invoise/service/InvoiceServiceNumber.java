@@ -1,12 +1,12 @@
 package com.mycompany.invoise.service;
 
 import com.mycompany.invoise.entity.Invoice;
+
 import com.mycompany.invoise.repository.InvoiceRepositoryInterface;
 
+public class InvoiceServiceNumber implements InvoiceServiceInterface{
 
-public class InvoiceServiceMichel implements InvoiceServiceInterface{
-
-    private static long lastNumber=112L;
+    private static long lastNumber=0L;
 
     private InvoiceRepositoryInterface invoiceRepository;
 
@@ -19,7 +19,7 @@ public class InvoiceServiceMichel implements InvoiceServiceInterface{
     }
 
     public void createInvoice(Invoice invoice){
-        invoice.setNumber("INV_"+(++lastNumber));
+        invoice.setNumber(String.valueOf(++lastNumber));
         invoiceRepository.create(invoice);
     }
 }
