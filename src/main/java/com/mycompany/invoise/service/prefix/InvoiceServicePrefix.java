@@ -1,4 +1,4 @@
-package com.mycompany.invoise.service;
+package com.mycompany.invoise.service.prefix;
 
 import com.mycompany.invoise.entity.Invoice;
 import com.mycompany.invoise.repository.InvoiceRepositoryInterface;

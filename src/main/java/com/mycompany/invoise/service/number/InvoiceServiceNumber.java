@@ -1,4 +1,4 @@
-package com.mycompany.invoise.service;
+package com.mycompany.invoise.service.number;
 
 import com.mycompany.invoise.entity.Invoice;
 
