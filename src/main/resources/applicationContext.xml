@@ -8,8 +8,9 @@
 
     <context:annotation-config/>
     <context:property-placeholder location="classpath:application.properties"/>
+    <context:component-scan base-package="com.mycompany.invoise"/>
 
-    <bean class="com.mycompany.invoise.service.InvoiceServicePrefix">
+    <!--bean class="com.mycompany.invoise.service.InvoiceServicePrefix">
 
     </bean>
 
@@ -17,7 +18,7 @@
 
     </bean>
 
-    <bean class="com.mycompany.invoise.repository.InvoiceRepositoryDatabase"/>
+    <bean class="com.mycompany.invoise.repository.InvoiceRepositoryDatabase"/-->
     
 
 </beans>

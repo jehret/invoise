@@ -4,8 +4,9 @@ import com.mycompany.invoise.entity.Invoice;
 
 import com.mycompany.invoise.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
-
+@Controller
 public class InvoiceControllerWeb implements InvoiceControllerInterface {
 
     @Autowired
