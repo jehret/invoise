@@ -7,7 +7,7 @@ import com.mycompany.invoise.service.InvoiceServiceInterface;
 import org.springframework.stereotype.Controller;
 
 import java.util.Scanner;
-@Controller
+//@Controller
 public class InvoiceControllerKeyboard implements InvoiceControllerInterface {
 
     private InvoiceServiceInterface invoiceService;
