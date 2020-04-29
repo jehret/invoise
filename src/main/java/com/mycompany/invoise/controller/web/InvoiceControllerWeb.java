@@ -4,9 +4,12 @@ import com.mycompany.invoise.controller.InvoiceControllerInterface;
 import com.mycompany.invoise.entity.Invoice;
 
 import com.mycompany.invoise.service.InvoiceServiceInterface;
+import org.apache.tomcat.jni.Local;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.Locale;
 
 @Controller
 public class InvoiceControllerWeb implements InvoiceControllerInterface {
@@ -34,6 +37,6 @@ public class InvoiceControllerWeb implements InvoiceControllerInterface {
     @RequestMapping("/invoice-home")
     public String displayHome(){
         System.out.println("La méthode display Home a été invoquée");
-        return "";
+        return "index";
     }
 }
