@@ -1,7 +1,7 @@
-package com.mycompany.invoise.repository.database;
+package com.mycompany.invoise.core.repository.database;
 
-import com.mycompany.invoise.entity.Invoice;
-import com.mycompany.invoise.repository.InvoiceRepositoryInterface;
+import com.mycompany.invoise.core.entity.Invoice;
+import com.mycompany.invoise.core.repository.InvoiceRepositoryInterface;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
