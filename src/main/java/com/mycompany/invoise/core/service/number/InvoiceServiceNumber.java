@@ -32,8 +32,9 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
         this.invoiceRepository = invoiceRepository;
     }
 
-    public void createInvoice(Invoice invoice){
+    public Invoice createInvoice(Invoice invoice){
         invoice.setNumber(String.valueOf(++lastNumber));
         invoiceRepository.create(invoice);
+        return invoice;
     }
 }
