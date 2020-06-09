@@ -6,6 +6,20 @@ public class Invoice {
     private String customerName;
     private String orderNumber;
 
+    public Invoice(String number, String customerName) {
+        this.number = number;
+        this.customerName = customerName;
+    }
+
+    public Invoice(String number, String customerName, String orderNumber) {
+        this.number = number;
+        this.customerName = customerName;
+        this.orderNumber = orderNumber;
+    }
+
+    public Invoice() {
+    }
+
     public String getNumber() {
         return number;
     }

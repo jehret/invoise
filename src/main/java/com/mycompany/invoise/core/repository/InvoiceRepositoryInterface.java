@@ -5,7 +5,7 @@ import com.mycompany.invoise.core.entity.Invoice;
 import java.util.List;
 
 public interface InvoiceRepositoryInterface {
-    void create(Invoice invoice);
+    Invoice create(Invoice invoice);
     List<Invoice> list();
     Invoice getById(String number);
 }
