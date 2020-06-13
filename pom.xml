@@ -28,8 +28,14 @@
 
     <dependency>
       <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-jdbc</artifactId>
-      <version>1.1.7.RELEASE</version>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>2.2.7.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>jakarta.persistence</groupId>
+      <artifactId>jakarta.persistence-api</artifactId>
+      <version>2.2.3</version>
     </dependency>
 
     <dependency>

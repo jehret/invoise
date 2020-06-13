@@ -1,12 +1,14 @@
 package com.mycompany.invoise.core.entity;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
 
+import javax.persistence.*;
+
+@Entity
 public class Invoice {
 
     @Id
-    @Column("INVOICE_NUMBER")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="INVOICE_NUMBER")
     private String number;
     private String customerName;
     private String orderNumber;
