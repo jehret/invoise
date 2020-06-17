@@ -14,7 +14,8 @@ public class Customer {
     @Column(nullable = false,length = 50)
     private String name;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL,orphanRemoval = true,mappedBy = "customer")
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL,orphanRemoval = true,optional = false)
+    @JoinColumn(name="ID_ADDRESS")
     private Address address;
 
     public Customer(String name) {
