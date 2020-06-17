@@ -20,10 +20,6 @@ public class Address {
     @Column(nullable = false,length = 20)
     private String country;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL,orphanRemoval = true)
-    @JoinColumn(name="ID_CUSTOMER")
-    private Customer customer;
-
     public Address(String street, String streetNumber, String city, String zipCode, String country) {
         this.street = street;
         this.streetNumber = streetNumber;
@@ -81,13 +77,5 @@ public class Address {
 
     public void setCountry(String country) {
         this.country = country;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
     }
 }
