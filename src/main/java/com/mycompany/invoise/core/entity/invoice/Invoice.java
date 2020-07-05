@@ -1,12 +1,14 @@
-package com.mycompany.invoise.core.entity;
+package com.mycompany.invoise.core.entity.invoice;
 
+
+import com.mycompany.invoise.core.entity.customer.Customer;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@NamedEntityGraph(name="invoice.customer", attributeNodes = @NamedAttributeNode("customer"))
+//@NamedEntityGraph(name="invoice.customer", attributeNodes = @NamedAttributeNode("customer"))
 public class Invoice {
 
     @Id
@@ -15,9 +17,12 @@ public class Invoice {
     private String number;
     @Column(length = 13)
     private String orderNumber;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID_CUSTOMER", nullable = false)
+
+    @Transient
     private Customer customer;
+
+    private Long idCustomer;
+
     @OneToMany(
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
@@ -78,5 +83,13 @@ public class Invoice {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public Long getIdCustomer() {
+        return idCustomer;
+    }
+
+    public void setIdCustomer(Long idCustomer) {
+        this.idCustomer = idCustomer;
     }
 }

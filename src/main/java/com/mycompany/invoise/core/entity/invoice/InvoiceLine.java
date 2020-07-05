@@ -1,5 +1,7 @@
-package com.mycompany.invoise.core.entity;
+package com.mycompany.invoise.core.entity.invoice;
 
+
+import com.mycompany.invoise.core.entity.product.Product;
 
 import javax.persistence.*;
 
@@ -11,8 +13,10 @@ public class InvoiceLine {
     private Long id;
     @Column(nullable = false)
     private Short quantity;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID_PRODUCT")
+
+    private Long idProduct;
+
+    @Transient
     private Product product;
 
     public InvoiceLine() {
@@ -45,5 +49,13 @@ public class InvoiceLine {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    public Long getIdProduct() {
+        return idProduct;
+    }
+
+    public void setIdProduct(Long idProduct) {
+        this.idProduct = idProduct;
     }
 }

@@ -1,6 +1,6 @@
 package com.mycompany.invoise.core.service.number;
 
-import com.mycompany.invoise.core.entity.Invoice;
+import com.mycompany.invoise.core.entity.invoice.Invoice;
 
 import com.mycompany.invoise.core.repository.CustomerRepositoryInterface;
 import com.mycompany.invoise.core.repository.InvoiceRepositoryInterface;
