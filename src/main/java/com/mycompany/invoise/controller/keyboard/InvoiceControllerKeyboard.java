@@ -10,14 +10,14 @@ import java.util.Scanner;
 @Controller
 public class InvoiceControllerKeyboard implements InvoiceControllerInterface {
 
+    public InvoiceControllerKeyboard(InvoiceServiceInterface invoiceService) {
+        this.invoiceService = invoiceService;
+    }
+
     private InvoiceServiceInterface invoiceService;
 
     public InvoiceServiceInterface getInvoiceService() {
         return invoiceService;
-    }
-
-    public void setInvoiceService(InvoiceServiceInterface invoiceService) {
-        this.invoiceService = invoiceService;
     }
 
     public void createInvoice(){

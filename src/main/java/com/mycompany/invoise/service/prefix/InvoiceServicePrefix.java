@@ -10,20 +10,19 @@ import org.springframework.stereotype.Service;
 @Service
 public class InvoiceServicePrefix implements InvoiceServiceInterface {
 
+    public InvoiceServicePrefix(InvoiceRepositoryInterface invoiceRepository) {
+        this.invoiceRepository = invoiceRepository;
+    }
+
     @Value("${invoice.lastNumber}")
     private long lastNumber;
     @Value("${invoice.prefix}")
     private String prefix;
 
-    @Autowired
-    private InvoiceRepositoryInterface invoiceRepository;
+    private final InvoiceRepositoryInterface invoiceRepository;
 
     public InvoiceRepositoryInterface getInvoiceRepository() {
         return invoiceRepository;
-    }
-
-    public void setInvoiceRepository(InvoiceRepositoryInterface invoiceRepository) {
-        this.invoiceRepository = invoiceRepository;
     }
 
     public void createInvoice(Invoice invoice){

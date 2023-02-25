@@ -10,15 +10,15 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class InvoiceControllerWeb implements InvoiceControllerInterface {
 
+    public InvoiceControllerWeb(InvoiceServiceInterface invoiceService) {
+        this.invoiceService = invoiceService;
+    }
+
     @Autowired
     private InvoiceServiceInterface invoiceService;
 
     public InvoiceServiceInterface getInvoiceService() {
         return invoiceService;
-    }
-
-    public void setInvoiceService(InvoiceServiceInterface invoiceService) {
-        this.invoiceService = invoiceService;
     }
 
     public void createInvoice(){

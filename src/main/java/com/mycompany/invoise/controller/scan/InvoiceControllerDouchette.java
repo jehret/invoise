@@ -8,14 +8,14 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class InvoiceControllerDouchette implements InvoiceControllerInterface {
 
+    public InvoiceControllerDouchette(InvoiceServiceInterface invoiceService) {
+        this.invoiceService = invoiceService;
+    }
+
     private InvoiceServiceInterface invoiceService;
 
     public InvoiceServiceInterface getInvoiceService() {
         return invoiceService;
-    }
-
-    public void setInvoiceService(InvoiceServiceInterface invoiceService) {
-        this.invoiceService = invoiceService;
     }
 
     @Override
