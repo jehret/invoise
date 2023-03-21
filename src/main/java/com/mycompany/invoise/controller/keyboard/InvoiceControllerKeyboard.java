@@ -14,7 +14,7 @@ public class InvoiceControllerKeyboard implements InvoiceControllerInterface {
         this.invoiceService = invoiceService;
     }
 
-    private InvoiceServiceInterface invoiceService;
+    private final InvoiceServiceInterface invoiceService;
 
     public InvoiceServiceInterface getInvoiceService() {
         return invoiceService;

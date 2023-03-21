@@ -15,7 +15,7 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
 
     private static long lastNumber=0L;
 
-    private InvoiceRepositoryInterface invoiceRepository;
+    private final InvoiceRepositoryInterface invoiceRepository;
 
     public InvoiceRepositoryInterface getInvoiceRepository() {
         return invoiceRepository;
