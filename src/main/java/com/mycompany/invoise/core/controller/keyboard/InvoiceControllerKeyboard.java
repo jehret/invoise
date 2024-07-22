@@ -29,5 +29,4 @@ public class InvoiceControllerKeyboard implements InvoiceControllerInterface {
         invoiceService.createInvoice(invoice);
         return null;
     }
-
 }
