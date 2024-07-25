@@ -1,5 +1,5 @@
 package com.mycompany.invoise.core.repository.database;
-
+/*
 import com.mycompany.invoise.core.entity.Invoice;
 import com.mycompany.invoise.core.repository.InvoiceRepositoryInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,3 +52,4 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
                         rs.getString("CUSTOMER_NAME"),rs.getString("ORDER_NUMBER")));
     }
 }
+*/
