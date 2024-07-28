@@ -2,7 +2,6 @@ package com.mycompany.invoise.core.controller.keyboard;
 
 import com.mycompany.invoise.core.controller.InvoiceControllerInterface;
 import com.mycompany.invoise.core.entity.Invoice;
-
 import com.mycompany.invoise.core.service.InvoiceServiceInterface;
 
 import java.util.Scanner;
@@ -28,6 +27,6 @@ public class InvoiceControllerKeyboard implements InvoiceControllerInterface {
 
         invoiceService.createInvoice(invoice);
         return null;
-    }
 
+    }
 }
