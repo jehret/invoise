@@ -1,6 +1,9 @@
 package com.mycompany.invoise.core.entity;
 
-import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import jakarta.persistence.*;
 
 @Entity
 public class Customer {
