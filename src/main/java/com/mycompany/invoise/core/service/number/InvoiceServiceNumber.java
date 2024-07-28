@@ -37,9 +37,8 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
         this.invoiceRepository = invoiceRepository;
     }
 
-    @Transactional
     public Invoice createInvoice(Invoice invoice){
-        customerRepository.save(invoice.getCustomer());
+
         return invoiceRepository.save(invoice);
     }
 }
