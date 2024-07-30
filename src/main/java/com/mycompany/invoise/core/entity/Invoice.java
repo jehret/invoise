@@ -1,7 +1,9 @@
 package com.mycompany.invoise.core.entity;
 
 
-import javax.persistence.*;
+
+import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
