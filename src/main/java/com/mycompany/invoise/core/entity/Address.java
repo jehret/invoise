@@ -1,8 +1,8 @@
 package com.mycompany.invoise.core.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 
-import javax.persistence.*;
 
 @Entity
 public class Address {
