@@ -3,7 +3,6 @@ package com.mycompany.invoise.core.repository.memory;
 import com.mycompany.invoise.core.entity.Invoice;
 import com.mycompany.invoise.core.repository.InvoiceRepositoryInterface;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -11,11 +10,11 @@ import java.util.Optional;
 //@Repository
 public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
 
-    private static List<Invoice> invoices=new ArrayList<>();
+    private static final List<Invoice> invoices = new ArrayList<>();
 
-    public Invoice save(Invoice invoice){
+    public Invoice save(Invoice invoice) {
         invoices.add(invoice);
-        System.out.println("Invoice added with number "+invoice.getNumber()+" for "+invoice.getCustomerName());
+        System.out.println("Invoice added with number " + invoice.getNumber() + " for " + invoice.getCustomerName());
         return invoice;
     }
 
