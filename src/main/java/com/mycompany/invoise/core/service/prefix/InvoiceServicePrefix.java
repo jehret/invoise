@@ -5,9 +5,6 @@ import com.mycompany.invoise.core.repository.InvoiceRepositoryInterface;
 import com.mycompany.invoise.core.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 //@Service
 public class InvoiceServicePrefix implements InvoiceServiceInterface {
@@ -28,8 +25,8 @@ public class InvoiceServicePrefix implements InvoiceServiceInterface {
         this.invoiceRepository = invoiceRepository;
     }
 
-    public Invoice createInvoice(Invoice invoice){
-        invoice.setNumber(prefix+(++lastNumber));
+    public Invoice createInvoice(Invoice invoice) {
+        invoice.setNumber(prefix + (++lastNumber));
         invoiceRepository.save(invoice);
         return invoice;
     }
