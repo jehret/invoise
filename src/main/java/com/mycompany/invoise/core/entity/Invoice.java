@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@NamedEntityGraph(name="invoice.customer", attributeNodes = @NamedAttributeNode("customer"))
+@NamedEntityGraph(name = "invoice.customer", attributeNodes = @NamedAttributeNode("customer"))
 public class Invoice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="INVOICE_NUMBER",columnDefinition="BIGINT")
+    @Column(name = "INVOICE_NUMBER", columnDefinition = "BIGINT")
     private String number;
     @Column(length = 13)
     private String orderNumber;
@@ -25,7 +25,7 @@ public class Invoice {
             orphanRemoval = true
     )
     @JoinColumn(name = "INVOICE_NUMBER", nullable = false)
-    private List<InvoiceLine> lines=new ArrayList<>();
+    private final List<InvoiceLine> lines = new ArrayList<>();
 
     public Invoice(String number, String orderNumber, Customer customer) {
         this.number = number;

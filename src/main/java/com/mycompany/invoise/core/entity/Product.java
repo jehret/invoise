@@ -12,15 +12,15 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false,length = 50)
+    @Column(nullable = false, length = 50)
     private String name;
     @ManyToMany
     @JoinTable(
-            name="PRODUCT_CATEGORIES",
-            joinColumns = {@JoinColumn(name="ID_PRODUCT")},
-            inverseJoinColumns = {@JoinColumn(name="ID_CATEGORY")}
+            name = "PRODUCT_CATEGORIES",
+            joinColumns = {@JoinColumn(name = "ID_PRODUCT")},
+            inverseJoinColumns = {@JoinColumn(name = "ID_CATEGORY")}
     )
-    private List<Category> categories=new ArrayList<>();
+    private final List<Category> categories = new ArrayList<>();
 
     public Product(String name) {
         this.name = name;

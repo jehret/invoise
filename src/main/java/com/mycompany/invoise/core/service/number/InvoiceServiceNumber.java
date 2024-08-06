@@ -1,7 +1,6 @@
 package com.mycompany.invoise.core.service.number;
 
 import com.mycompany.invoise.core.entity.Invoice;
-
 import com.mycompany.invoise.core.repository.CustomerRepositoryInterface;
 import com.mycompany.invoise.core.repository.InvoiceRepositoryInterface;
 import com.mycompany.invoise.core.service.InvoiceServiceInterface;
@@ -36,7 +35,7 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
         this.invoiceRepository = invoiceRepository;
     }
 
-    public Invoice createInvoice(Invoice invoice){
+    public Invoice createInvoice(Invoice invoice) {
         customerRepository.save(invoice.getCustomer());
         return invoiceRepository.save(invoice);
     }
