@@ -21,8 +21,8 @@ public class InvoiceControllerDouchette implements InvoiceControllerInterface {
     @Override
     public String createInvoice(Invoice invoice) {
         System.out.println("Usage of a scanner");
-        invoice=new Invoice();
-        Customer customer=new Customer("Virgin Galactic");
+        invoice = new Invoice();
+        Customer customer = new Customer("Virgin Galactic");
         invoice.setCustomer(customer);
         invoiceService.createInvoice(invoice);
         return null;
