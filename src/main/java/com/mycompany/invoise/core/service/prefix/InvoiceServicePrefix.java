@@ -28,8 +28,8 @@ public class InvoiceServicePrefix implements InvoiceServiceInterface {
         this.invoiceRepository = invoiceRepository;
     }
 
-    public void createInvoice(Invoice invoice){
-        invoice.setNumber(prefix+(++lastNumber));
+    public void createInvoice(Invoice invoice) {
+        invoice.setNumber(prefix + (++lastNumber));
         invoiceRepository.create(invoice);
     }
 
