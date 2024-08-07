@@ -5,5 +5,6 @@ import com.mycompany.invoise.repository.InvoiceRepositoryInterface;
 
 public interface InvoiceServiceInterface {
     void createInvoice(Invoice invoice);
+
     void setInvoiceRepository(InvoiceRepositoryInterface invoiceRepository);
 }
