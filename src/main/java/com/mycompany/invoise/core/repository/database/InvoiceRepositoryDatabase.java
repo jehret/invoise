@@ -9,28 +9,28 @@ import java.util.List;
 @Repository
 public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
 
-    public void create(Invoice invoice){
+    public void create(Invoice invoice) {
         /*[…]
         PreparedStatement pstmt=connexion.prepareStatement("INSERT INTO FACTURE (NUMBER,CUSTOMERNAME) VALUES (?,?)");
                 […]
         pstmt.executeUpdate();*/
-        System.out.println("Database: Invoice added with number "+invoice.getNumber()+" for "+invoice.getCustomerName());
+        System.out.println("Database: Invoice added with number " + invoice.getNumber() + " for " + invoice.getCustomerName());
     }
 
     @Override
     public List<Invoice> list() {
-        Invoice invoice1=new Invoice();
+        Invoice invoice1 = new Invoice();
         invoice1.setNumber("NUM_1");
         invoice1.setCustomerName("EDF");
-        Invoice invoice2=new Invoice();
+        Invoice invoice2 = new Invoice();
         invoice2.setNumber("NUM_2");
         invoice2.setCustomerName("La poste");
-        return List.of(invoice1,invoice2);
+        return List.of(invoice1, invoice2);
     }
 
     @Override
     public Invoice getById(String number) {
-        Invoice invoice1=new Invoice();
+        Invoice invoice1 = new Invoice();
         invoice1.setNumber(number);
         invoice1.setCustomerName("EDF");
         invoice1.setOrderNumber("ON_002");
