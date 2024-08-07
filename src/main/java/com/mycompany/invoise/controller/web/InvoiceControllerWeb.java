@@ -2,7 +2,6 @@ package com.mycompany.invoise.controller.web;
 
 import com.mycompany.invoise.controller.InvoiceControllerInterface;
 import com.mycompany.invoise.entity.Invoice;
-
 import com.mycompany.invoise.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,19 +24,19 @@ public class InvoiceControllerWeb implements InvoiceControllerInterface {
         this.invoiceService = invoiceService;
     }
 
-    public void createInvoice(){
+    public void createInvoice() {
 
-        String customerName="Tesla";
-        Invoice invoice=new Invoice();
+        String customerName = "Tesla";
+        Invoice invoice = new Invoice();
         invoice.setCustomerName(customerName);
 
         invoiceService.createInvoice(invoice);
     }
 
     @RequestMapping("/invoice-home")
-    public @ModelAttribute("invoices") List<Invoice> displayHome(){
+    public @ModelAttribute("invoices") List<Invoice> displayHome() {
         System.out.println("La méthode display Home a été invoquée");
-        List<Invoice> invoices=invoiceService.getInvoiceList();
+        List<Invoice> invoices = invoiceService.getInvoiceList();
         return invoices;
     }
 }
