@@ -24,4 +24,9 @@ public class InvoiceControllerDouchette implements InvoiceControllerInterface {
         invoice.setCustomerName("Virgin Galactic");
         invoiceService.createInvoice(invoice);
     }
+
+    @Override
+    public String createInvoice(Invoice invoice) {
+        return "";
+    }
 }

@@ -29,4 +29,9 @@ public class InvoiceControllerKeyboard implements InvoiceControllerInterface {
         invoiceService.createInvoice(invoice);
     }
 
+    @Override
+    public String createInvoice(Invoice invoice) {
+        return "";
+    }
+
 }
