@@ -27,14 +27,10 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>2.2.7.RELEASE</version>
+            <artifactId>spring-data-jdbc</artifactId>
+            <version>1.1.7.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-relational</artifactId>
-            <version>3.3.2</version>
-        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
