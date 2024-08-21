@@ -18,17 +18,17 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    public Invoice create(Invoice invoice){
+    public Invoice create(Invoice invoice) {
 
-        KeyHolder kh=new GeneratedKeyHolder();
+        KeyHolder kh = new GeneratedKeyHolder();
 
         jdbcTemplate.update(connection -> {
-            PreparedStatement ps=connection.prepareStatement("INSERT INTO INVOICE(CUSTOMER_NAME,ORDER_NUMBER) VALUES (?,?)",
+            PreparedStatement ps = connection.prepareStatement("INSERT INTO INVOICE(CUSTOMER_NAME,ORDER_NUMBER) VALUES (?,?)",
                     Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1,invoice.getCustomerName());
-            ps.setString(2,invoice.getOrderNumber());
+            ps.setString(1, invoice.getCustomerName());
+            ps.setString(2, invoice.getOrderNumber());
             return ps;
-        },kh);
+        }, kh);
 
         invoice.setNumber(kh.getKey().toString());
         return invoice;
@@ -38,7 +38,7 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
     public List<Invoice> list() {
 
         return jdbcTemplate.query("SELECT INVOICE_NUMBER,CUSTOMER_NAME FROM INVOICE",
-                (rs,rowNum) -> new Invoice(String.valueOf(rs.getLong("INVOICE_NUMBER")),
+                (rs, rowNum) -> new Invoice(String.valueOf(rs.getLong("INVOICE_NUMBER")),
                         rs.getString("CUSTOMER_NAME")));
 
 
@@ -48,7 +48,7 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
     public Invoice getById(String number) {
         return jdbcTemplate.queryForObject("SELECT INVOICE_NUMBER,CUSTOMER_NAME,ORDER_NUMBER FROM INVOICE WHERE INVOICE_NUMBER=?",
                 new Object[]{number},
-                (rs,rowNum) -> new Invoice(String.valueOf(rs.getLong("INVOICE_NUMBER")),
-                        rs.getString("CUSTOMER_NAME"),rs.getString("ORDER_NUMBER")));
+                (rs, rowNum) -> new Invoice(String.valueOf(rs.getLong("INVOICE_NUMBER")),
+                        rs.getString("CUSTOMER_NAME"), rs.getString("ORDER_NUMBER")));
     }
 }
