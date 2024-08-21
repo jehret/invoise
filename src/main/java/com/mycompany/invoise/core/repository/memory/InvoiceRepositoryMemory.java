@@ -10,7 +10,7 @@ import java.util.Optional;
 //@Repository
 public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
 
-    private static List<Invoice> invoices = new ArrayList<>();
+    private static final List<Invoice> invoices = new ArrayList<>();
 
     public Invoice save(Invoice invoice) {
         invoices.add(invoice);
