@@ -10,11 +10,6 @@ import java.util.List;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Product {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(nullable = false, length = 50)
-    private String name;
     @ManyToMany
     @JoinTable(
             name = "PRODUCT_CATEGORIES",
@@ -22,6 +17,11 @@ public class Product {
             inverseJoinColumns = {@JoinColumn(name = "ID_CATEGORY")}
     )
     private final List<Category> categories = new ArrayList<>();
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    @Column(nullable = false, length = 50)
+    private String name;
 
     public Product(String name) {
         this.name = name;

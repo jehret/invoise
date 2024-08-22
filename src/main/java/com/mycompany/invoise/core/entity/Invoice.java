@@ -9,6 +9,13 @@ import java.util.List;
 @Entity
 public class Invoice {
 
+    @OneToMany(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
+    )
+    @JoinColumn(name = "INVOICE_NUMBER", nullable = false)
+    private final List<InvoiceLine> lines = new ArrayList<>();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "INVOICE_NUMBER", columnDefinition = "BIGINT")
@@ -18,13 +25,6 @@ public class Invoice {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_CUSTOMER", nullable = false)
     private Customer customer;
-    @OneToMany(
-            fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL,
-            orphanRemoval = true
-    )
-    @JoinColumn(name = "INVOICE_NUMBER", nullable = false)
-    private final List<InvoiceLine> lines = new ArrayList<>();
 
     public Invoice(String number, String orderNumber, Customer customer) {
         this.number = number;
