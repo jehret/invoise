@@ -15,7 +15,7 @@ public class Invoice {
             orphanRemoval = true
     )
     @JoinColumn(name = "INVOICE_NUMBER", nullable = false)
-    private final List<InvoiceLine> lines = new ArrayList<>();
+    private List<InvoiceLine> lines = new ArrayList<>();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "INVOICE_NUMBER", columnDefinition = "BIGINT")
