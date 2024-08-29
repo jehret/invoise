@@ -16,7 +16,7 @@ public class Product {
             joinColumns = {@JoinColumn(name = "ID_PRODUCT")},
             inverseJoinColumns = {@JoinColumn(name = "ID_CATEGORY")}
     )
-    private final List<Category> categories = new ArrayList<>();
+    private List<Category> categories = new ArrayList<>();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
