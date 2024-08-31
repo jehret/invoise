@@ -25,7 +25,7 @@ public class Invoice {
             orphanRemoval = true
     )
     @JoinColumn(name = "INVOICE_NUMBER", nullable = false)
-    private final List<InvoiceLine> lines = new ArrayList<>();
+    private List<InvoiceLine> lines = new ArrayList<>();
 
     public Invoice(String number, String orderNumber, Customer customer) {
         this.number = number;
