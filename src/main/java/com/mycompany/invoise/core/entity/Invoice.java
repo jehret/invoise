@@ -23,7 +23,7 @@ public class Invoice {
     @Column(length = 13)
     private String orderNumber;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID_CUSTOMER", nullable = false)
+    @JoinColumn(name = "CUSTOMER_NAME", nullable = false)
     private Customer customer;
 
     public Invoice(String number, String orderNumber, Customer customer) {
