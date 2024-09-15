@@ -58,28 +58,14 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
         throw new UnsupportedOperationException();
     }
 
-    /**
-     * Retrieves an entity by its id.
-     *
-     * @param s must not be {@literal null}.
-     * @return the entity with the given id or {@literal Optional#empty()} if none found.
-     * @throws IllegalArgumentException if {@literal id} is {@literal null}.
-     */
     @Override
-    public Optional<Invoice> findById(String s) {
-        return Optional.empty();
+    public Optional<Invoice> findById(String number) {
+        throw new UnsupportedOperationException();
     }
 
-    /**
-     * Returns whether an entity with the given id exists.
-     *
-     * @param s must not be {@literal null}.
-     * @return {@literal true} if an entity with the given id exists, {@literal false} otherwise.
-     * @throws IllegalArgumentException if {@literal id} is {@literal null}.
-     */
     @Override
     public boolean existsById(String s) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
 }
