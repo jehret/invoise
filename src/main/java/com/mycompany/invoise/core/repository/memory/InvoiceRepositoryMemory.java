@@ -45,7 +45,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
 
     @Override
     public void deleteAllById(Iterable<? extends String> strings) {
-
+        throw new UnsupportedOperationException();
     }
 
     @Override
