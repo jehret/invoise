@@ -1,8 +1,8 @@
 package com.mycompany.invoise.core.controller.scan;
 
 import com.mycompany.invoise.core.controller.InvoiceControllerInterface;
-import com.mycompany.invoise.core.entity.Customer;
-import com.mycompany.invoise.core.entity.Invoice;
+import com.mycompany.invoise.core.entity.customer.Customer;
+import com.mycompany.invoise.core.entity.invoice.Invoice;
 import com.mycompany.invoise.core.service.InvoiceServiceInterface;
 
 //@Controller
