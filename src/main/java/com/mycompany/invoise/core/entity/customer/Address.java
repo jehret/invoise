@@ -1,8 +1,6 @@
 package com.mycompany.invoise.core.entity.customer;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 public class Address {
@@ -10,15 +8,15 @@ public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false,length = 50)
+    @Column(nullable = false, length = 50)
     private String street;
     @Column(length = 10)
     private String streetNumber;
-    @Column(nullable = false,length = 20)
+    @Column(nullable = false, length = 20)
     private String city;
-    @Column(nullable = false,length = 10)
+    @Column(nullable = false, length = 10)
     private String zipCode;
-    @Column(nullable = false,length = 20)
+    @Column(nullable = false, length = 20)
     private String country;
 
     public Address(String street, String streetNumber, String city, String zipCode, String country) {

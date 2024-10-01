@@ -10,11 +10,11 @@ import java.util.Optional;
 //@Repository
 public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
 
-    private static List<Invoice> invoices=new ArrayList<>();
+    private static List<Invoice> invoices = new ArrayList<>();
 
-    public Invoice save(Invoice invoice){
+    public Invoice save(Invoice invoice) {
         invoices.add(invoice);
-        System.out.println("Invoice added with number "+invoice.getNumber()+" for "+invoice.getCustomer().getName());
+        System.out.println("Invoice added with number " + invoice.getNumber() + " for " + invoice.getCustomer().getName());
         return invoice;
     }
 
@@ -44,6 +44,11 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     }
 
     @Override
+    public void deleteAllById(Iterable<? extends String> strings) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
     public void deleteAll(Iterable<? extends Invoice> iterable) {
         throw new UnsupportedOperationException();
     }
@@ -67,4 +72,5 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     public boolean existsById(String s) {
         throw new UnsupportedOperationException();
     }
+
 }

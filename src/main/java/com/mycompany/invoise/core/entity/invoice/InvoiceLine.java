@@ -1,9 +1,7 @@
 package com.mycompany.invoise.core.entity.invoice;
 
-
 import com.mycompany.invoise.core.entity.product.Product;
-
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 public class InvoiceLine {

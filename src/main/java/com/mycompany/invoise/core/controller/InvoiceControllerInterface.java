@@ -6,5 +6,6 @@ import com.mycompany.invoise.core.service.InvoiceServiceInterface;
 public interface InvoiceControllerInterface {
 
     String createInvoice(Invoice invoice);
+
     void setInvoiceService(InvoiceServiceInterface invoiceService);
 }
