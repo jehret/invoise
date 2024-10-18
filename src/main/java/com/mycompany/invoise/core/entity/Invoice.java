@@ -2,15 +2,15 @@ package com.mycompany.invoise.core.entity;
 
 public class Invoice {
 
-    private String number;
+    private Long number;
     private String customerName;
     private String orderNumber;
 
-    public String getNumber() {
+    public Long getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(Long number) {
         this.number = number;
     }
 

@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@Deprecated
+public class InvoiceServicePrefix{
+/*
 public class InvoiceServicePrefix implements InvoiceServiceInterface {
 
     @Value("${invoice.lastNumber}")
@@ -59,4 +62,6 @@ public class InvoiceServicePrefix implements InvoiceServiceInterface {
     public void setPrefix(String prefix) {
         this.prefix = prefix;
     }
+
+ */
 }

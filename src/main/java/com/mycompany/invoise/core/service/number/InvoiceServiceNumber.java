@@ -19,7 +19,7 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
     }
 
     @Override
-    public Invoice getInvoiceByNumber(String number) {
+    public Invoice getInvoiceByNumber(Long number) {
         return invoiceRepository.getById(number);
     }
 
@@ -32,7 +32,7 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
     }
 
     public Invoice createInvoice(Invoice invoice) {
-        invoice.setNumber(String.valueOf(++lastNumber));
+        invoice.setNumber(++lastNumber);
         invoiceRepository.create(invoice);
         return invoice;
     }

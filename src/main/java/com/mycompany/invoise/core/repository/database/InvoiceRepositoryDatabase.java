@@ -20,16 +20,16 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
     @Override
     public List<Invoice> list() {
         Invoice invoice1 = new Invoice();
-        invoice1.setNumber("NUM_1");
+        invoice1.setNumber(1L);
         invoice1.setCustomerName("EDF");
         Invoice invoice2 = new Invoice();
-        invoice2.setNumber("NUM_2");
+        invoice2.setNumber(2L);
         invoice2.setCustomerName("La poste");
         return List.of(invoice1, invoice2);
     }
 
     @Override
-    public Invoice getById(String number) {
+    public Invoice getById(Long number) {
         Invoice invoice1 = new Invoice();
         invoice1.setNumber(number);
         invoice1.setCustomerName("EDF");
