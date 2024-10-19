@@ -24,7 +24,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     }
 
     @Override
-    public Iterable<Invoice> findAllById(Iterable<String> iterable) {
+    public Iterable<Invoice> findAllById(Iterable<Long> iterable) {
         throw new UnsupportedOperationException();
     }
 
@@ -34,7 +34,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     }
 
     @Override
-    public void deleteById(String s) {
+    public void deleteById(Long s) {
         throw new UnsupportedOperationException();
     }
 
@@ -48,14 +48,24 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
      * <p>
      * Entities that aren't found in the persistence store are silently ignored.
      *
-     * @param strings must not be {@literal null}. Must not contain {@literal null} elements.
+     * @param longs must not be {@literal null}. Must not contain {@literal null} elements.
      * @throws IllegalArgumentException in case the given {@literal ids} or one of its elements is {@literal null}.
      * @since 2.5
      */
     @Override
-    public void deleteAllById(Iterable<? extends String> strings) {
+    public void deleteAllById(Iterable<? extends Long> longs) {
 
     }
+
+    /**
+     * Deletes all instances of the type {@code T} with the given IDs.
+     * <p>
+     * Entities that aren't found in the persistence store are silently ignored.
+     *
+     * @param iterable must not be {@literal null}. Must not contain {@literal null} elements.
+     * @throws IllegalArgumentException in case the given {@literal ids} or one of its elements is {@literal null}.
+     * @since 2.5
+     */
 
     @Override
     public void deleteAll(Iterable<? extends Invoice> iterable) {
@@ -74,14 +84,13 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
 
 
     @Override
-    public Optional<Invoice> findById(String s) {
+    public Optional<Invoice> findById(Long s) {
         throw new UnsupportedOperationException();
     }
 
 
     @Override
-    public boolean existsById(String s) {
+    public boolean existsById(Long s) {
         throw new UnsupportedOperationException();
     }
-
 }
