@@ -30,7 +30,7 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
             return ps;
         }, kh);
 
-        invoice.setNumber(kh.getKey().toString());
+        invoice.setNumber((Long) kh.getKey());
         return invoice;
     }
 
@@ -38,17 +38,17 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
     public List<Invoice> list() {
 
         return jdbcTemplate.query("SELECT INVOICE_NUMBER,CUSTOMER_NAME FROM INVOICE",
-                (rs, rowNum) -> new Invoice(String.valueOf(rs.getLong("INVOICE_NUMBER")),
+                (rs, rowNum) -> new Invoice((rs.getLong("INVOICE_NUMBER")),
                         rs.getString("CUSTOMER_NAME")));
 
 
     }
 
     @Override
-    public Invoice getById(String number) {
+    public Invoice getById(Long number) {
         return jdbcTemplate.queryForObject("SELECT INVOICE_NUMBER,CUSTOMER_NAME,ORDER_NUMBER FROM INVOICE WHERE INVOICE_NUMBER=?",
                 new Object[]{number},
-                (rs, rowNum) -> new Invoice(String.valueOf(rs.getLong("INVOICE_NUMBER")),
+                (rs, rowNum) -> new Invoice((rs.getLong("INVOICE_NUMBER")),
                         rs.getString("CUSTOMER_NAME"), rs.getString("ORDER_NUMBER")));
     }
 }

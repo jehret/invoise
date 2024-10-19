@@ -9,5 +9,5 @@ public interface InvoiceRepositoryInterface {
 
     List<Invoice> list();
 
-    Invoice getById(String number);
+    Invoice getById(Long number);
 }

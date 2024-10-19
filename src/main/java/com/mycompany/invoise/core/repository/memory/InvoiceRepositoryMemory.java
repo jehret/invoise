@@ -23,7 +23,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     }
 
     @Override
-    public Invoice getById(String number) {
+    public Invoice getById(Long number) {
         throw new UnsupportedOperationException();
     }
 }
