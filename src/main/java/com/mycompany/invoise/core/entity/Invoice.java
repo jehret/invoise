@@ -19,20 +19,20 @@ public class Invoice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "INVOICE_NUMBER", columnDefinition = "BIGINT")
-    private String number;
+    private Long number;
     @Column(length = 13)
     private String orderNumber;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_CUSTOMER", nullable = false)
     private Customer customer;
 
-    public Invoice(String number, String orderNumber, Customer customer) {
+    public Invoice(Long number, String orderNumber, Customer customer) {
         this.number = number;
         this.orderNumber = orderNumber;
         this.customer = customer;
     }
 
-    public Invoice(String number, Customer customer) {
+    public Invoice(Long number, Customer customer) {
         this.number = number;
         this.customer = customer;
     }
@@ -44,11 +44,11 @@ public class Invoice {
     public Invoice() {
     }
 
-    public String getNumber() {
+    public Long getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(Long number) {
         this.number = number;
     }
 

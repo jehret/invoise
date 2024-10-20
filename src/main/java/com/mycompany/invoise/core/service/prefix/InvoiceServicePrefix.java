@@ -2,12 +2,15 @@ package com.mycompany.invoise.core.service.prefix;
 
 import com.mycompany.invoise.core.entity.Invoice;
 import com.mycompany.invoise.core.repository.InvoiceRepositoryInterface;
-import com.mycompany.invoise.core.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
-//@Service
-public class InvoiceServicePrefix implements InvoiceServiceInterface {
+@Service
+@Deprecated
+public class InvoiceServicePrefix {
+    /*
+    public class InvoiceServicePrefix implements InvoiceServiceInterface {
 
     @Value("${invoice.lastNumber}")
     private long lastNumber;
@@ -56,4 +59,6 @@ public class InvoiceServicePrefix implements InvoiceServiceInterface {
     public void setPrefix(String prefix) {
         this.prefix = prefix;
     }
+
+     */
 }
