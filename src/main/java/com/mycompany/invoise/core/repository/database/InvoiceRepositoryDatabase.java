@@ -8,6 +8,7 @@ import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
+import java.math.BigInteger;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.List;
@@ -30,7 +31,8 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
             return ps;
         }, kh);
 
-        invoice.setNumber((Long) kh.getKey());
+        BigInteger generatedId = (BigInteger) kh.getKey();
+        invoice.setNumber(generatedId.longValue());
         return invoice;
     }
 
