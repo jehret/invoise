@@ -5,10 +5,14 @@ import com.mycompany.invoise.core.repository.InvoiceRepositoryInterface;
 import com.mycompany.invoise.core.service.InvoiceServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+@Service
+@Deprecated
+public class InvoiceServicePrefix{
 /*
-//@Service
 public class InvoiceServicePrefix implements InvoiceServiceInterface {
 
     @Value("${invoice.lastNumber}")
@@ -34,18 +38,13 @@ public class InvoiceServicePrefix implements InvoiceServiceInterface {
     }
 
     @Override
-    public Invoice getInvoiceByNumber(Long number) {
+    public Invoice getInvoiceByNumber(String number) {
         return invoiceRepository.getById(number);
     }
 
     @Override
     public List<Invoice> getInvoiceList() {
         return invoiceRepository.list();
-    }
-
-    @Override
-    public Invoice getInvoiceByNumber(Long number) {
-        return null;
     }
 
     public long getLastNumber() {
@@ -63,5 +62,6 @@ public class InvoiceServicePrefix implements InvoiceServiceInterface {
     public void setPrefix(String prefix) {
         this.prefix = prefix;
     }
+
+ */
 }
-*/
