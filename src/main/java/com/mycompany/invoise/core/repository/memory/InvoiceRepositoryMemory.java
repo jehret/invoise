@@ -24,7 +24,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     }
 
     @Override
-    public Iterable<Invoice> findAllById(Iterable<String> iterable) {
+    public Iterable<Invoice> findAllById(Iterable<Long> iterable) {
         throw new UnsupportedOperationException();
     }
 
@@ -34,7 +34,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     }
 
     @Override
-    public void deleteById(String s) {
+    public void deleteById(Long aLong) {
         throw new UnsupportedOperationException();
     }
 
@@ -44,7 +44,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     }
 
     @Override
-    public void deleteAllById(Iterable<? extends String> strings) {
+    public void deleteAllById(Iterable<? extends Long> longs) {
 
     }
 
@@ -65,13 +65,13 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
 
 
     @Override
-    public Optional<Invoice> findById(String number) {
+    public Optional<Invoice> findById(Long number) {
         throw new UnsupportedOperationException();
     }
 
 
     @Override
-    public boolean existsById(String s) {
+    public boolean existsById(Long aLong) {
         throw new UnsupportedOperationException();
     }
 
