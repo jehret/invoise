@@ -8,7 +8,7 @@ public interface InvoiceServiceInterface {
 
     Iterable<Invoice> getInvoiceList();
 
-    Invoice getInvoiceByNumber(String number);
+    Invoice getInvoiceByNumber(Long number);
 
     void setInvoiceRepository(InvoiceRepositoryInterface invoiceRepository);
 }

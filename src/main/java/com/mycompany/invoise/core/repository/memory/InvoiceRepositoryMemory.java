@@ -24,7 +24,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     }
 
     @Override
-    public Iterable<Invoice> findAllById(Iterable<String> iterable) {
+    public Iterable<Invoice> findAllById(Iterable<Long> iterable) {
         throw new UnsupportedOperationException();
     }
 
@@ -34,7 +34,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     }
 
     @Override
-    public void deleteById(String s) {
+    public void deleteById(Long aLong) {
         throw new UnsupportedOperationException();
     }
 
@@ -48,12 +48,12 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
      * <p>
      * Entities that aren't found in the persistence store are silently ignored.
      *
-     * @param strings must not be {@literal null}. Must not contain {@literal null} elements.
+     * @param Longs must not be {@literal null}. Must not contain {@literal null} elements.
      * @throws IllegalArgumentException in case the given {@literal ids} or one of its elements is {@literal null}.
      * @since 2.5
      */
     @Override
-    public void deleteAllById(Iterable<? extends String> strings) {
+    public void deleteAllById(Iterable<? extends Long> Longs) {
 
     }
 
@@ -75,24 +75,24 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     /**
      * Retrieves an entity by its id.
      *
-     * @param s must not be {@literal null}.
+     * @param aLong must not be {@literal null}.
      * @return the entity with the given id or {@literal Optional#empty()} if none found.
      * @throws IllegalArgumentException if {@literal id} is {@literal null}.
      */
     @Override
-    public Optional<Invoice> findById(String s) {
+    public Optional<Invoice> findById(Long aLong) {
         return Optional.empty();
     }
 
     /**
      * Returns whether an entity with the given id exists.
      *
-     * @param s must not be {@literal null}.
+     * @param aLong must not be {@literal null}.
      * @return {@literal true} if an entity with the given id exists, {@literal false} otherwise.
      * @throws IllegalArgumentException if {@literal id} is {@literal null}.
      */
     @Override
-    public boolean existsById(String s) {
+    public boolean existsById(Long aLong) {
         return false;
     }
 
