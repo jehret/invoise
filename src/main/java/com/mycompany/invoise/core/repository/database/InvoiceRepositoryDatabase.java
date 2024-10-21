@@ -31,8 +31,8 @@ public class InvoiceRepositoryDatabase implements InvoiceRepositoryInterface {
             return ps;
         }, kh);
 
-        BigInteger generatedId = (BigInteger) kh.getKey();
-        invoice.setNumber(generatedId.longValue());
+        invoice.setNumber(kh.getKey().longValue()); // Assuming invoice number is now a Long
+
         return invoice;
     }
 
