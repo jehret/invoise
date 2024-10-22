@@ -4,7 +4,7 @@ import com.mycompany.invoise.core.entity.Invoice;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.repository.CrudRepository;
 
-public interface InvoiceRepositoryInterface extends CrudRepository<Invoice, String> {
+public interface InvoiceRepositoryInterface extends CrudRepository<Invoice, Long> {
     @EntityGraph(value = "invoice.customer", type = EntityGraph.EntityGraphType.FETCH)
     Iterable<Invoice> findAll();
     /*Invoice create(Invoice invoice);
