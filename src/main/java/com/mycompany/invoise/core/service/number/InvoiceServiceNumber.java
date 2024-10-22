@@ -23,7 +23,7 @@ public class InvoiceServiceNumber implements InvoiceServiceInterface {
     }
 
     @Override
-    public Invoice getInvoiceByNumber(String number) {
+    public Invoice getInvoiceByNumber(Long number) {
         return invoiceRepository.findById(number).orElseThrow();
     }
 
