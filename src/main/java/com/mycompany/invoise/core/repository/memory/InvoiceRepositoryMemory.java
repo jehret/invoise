@@ -34,7 +34,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     }
 
     @Override
-    public void deleteById(Long s) {
+    public void deleteById(Long aLong) {
         throw new UnsupportedOperationException();
     }
 
@@ -48,12 +48,12 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
      * <p>
      * Entities that aren't found in the persistence store are silently ignored.
      *
-     * @param strings must not be {@literal null}. Must not contain {@literal null} elements.
+     * @param longs must not be {@literal null}. Must not contain {@literal null} elements.
      * @throws IllegalArgumentException in case the given {@literal ids} or one of its elements is {@literal null}.
      * @since 2.5
      */
     @Override
-    public void deleteAllById(Iterable<? extends Long> strings) {
+    public void deleteAllById(Iterable<? extends Long> longs) {
 
     }
 
@@ -71,16 +71,15 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     public <S extends Invoice> Iterable<S> saveAll(Iterable<S> iterable) {
         throw new UnsupportedOperationException();
     }
-
-
+    
     @Override
     public Optional<Invoice> findById(Long number) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public boolean existsById(Long s) {
-        throw new UnsupportedOperationException();
+    public boolean existsById(Long aLong) {
+        return false;
     }
 
 }
