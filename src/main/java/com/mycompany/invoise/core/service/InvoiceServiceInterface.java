@@ -7,6 +7,6 @@ import com.mycompany.invoise.core.repository.InvoiceRepositoryInterface;
 public interface InvoiceServiceInterface {
     Invoice createInvoice(Invoice invoice);
     Iterable<Invoice> getInvoiceList();
-    Invoice getInvoiceByNumber(String number);
+    Invoice getInvoiceByNumber(Long number);
     void setInvoiceRepository(InvoiceRepositoryInterface invoiceRepository);
 }

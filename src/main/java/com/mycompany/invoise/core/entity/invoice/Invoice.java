@@ -3,7 +3,7 @@ package com.mycompany.invoise.core.entity.invoice;
 
 import com.mycompany.invoise.core.entity.customer.Customer;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class Invoice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="INVOICE_NUMBER",columnDefinition="BIGINT")
-    private String number;
+    private Long number;
     @Column(length = 13)
     private String orderNumber;
 
@@ -31,13 +31,13 @@ public class Invoice {
     @JoinColumn(name = "INVOICE_NUMBER", nullable = false)
     private List<InvoiceLine> lines=new ArrayList<>();
 
-    public Invoice(String number, String orderNumber, Customer customer) {
+    public Invoice(Long number, String orderNumber, Customer customer) {
         this.number = number;
         this.orderNumber = orderNumber;
         this.customer = customer;
     }
 
-    public Invoice(String number, Customer customer) {
+    public Invoice(Long number, Customer customer) {
         this.number = number;
         this.customer = customer;
     }
@@ -49,11 +49,11 @@ public class Invoice {
     public Invoice() {
     }
 
-    public String getNumber() {
+    public Long getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(Long number) {
         this.number = number;
     }
 

@@ -2,7 +2,7 @@ package com.mycompany.invoise.core.entity.customer;
 
 import com.mycompany.invoise.core.entity.customer.Address;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 public class Customer {
