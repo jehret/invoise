@@ -14,7 +14,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
 
     public Invoice save(Invoice invoice) {
         invoices.add(invoice);
-        System.out.println("Invoice added with number " + invoice.getNumber() + " for " + invoice.getCustomer().getName());
+        System.out.println("Invoice added with number " + invoice.getNumber() + " for " + invoice.getCustomerName());
         return invoice;
     }
 
@@ -34,7 +34,7 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
     }
 
     @Override
-    public void deleteById(Long aLong) {
+    public void deleteById(Long s) {
         throw new UnsupportedOperationException();
     }
 
@@ -48,14 +48,24 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
      * <p>
      * Entities that aren't found in the persistence store are silently ignored.
      *
-     * @param Longs must not be {@literal null}. Must not contain {@literal null} elements.
+     * @param longs must not be {@literal null}. Must not contain {@literal null} elements.
      * @throws IllegalArgumentException in case the given {@literal ids} or one of its elements is {@literal null}.
      * @since 2.5
      */
     @Override
-    public void deleteAllById(Iterable<? extends Long> Longs) {
+    public void deleteAllById(Iterable<? extends Long> longs) {
 
     }
+
+    /**
+     * Deletes all instances of the type {@code T} with the given IDs.
+     * <p>
+     * Entities that aren't found in the persistence store are silently ignored.
+     *
+     * @param iterable must not be {@literal null}. Must not contain {@literal null} elements.
+     * @throws IllegalArgumentException in case the given {@literal ids} or one of its elements is {@literal null}.
+     * @since 2.5
+     */
 
     @Override
     public void deleteAll(Iterable<? extends Invoice> iterable) {
@@ -72,28 +82,15 @@ public class InvoiceRepositoryMemory implements InvoiceRepositoryInterface {
         throw new UnsupportedOperationException();
     }
 
-    /**
-     * Retrieves an entity by its id.
-     *
-     * @param aLong must not be {@literal null}.
-     * @return the entity with the given id or {@literal Optional#empty()} if none found.
-     * @throws IllegalArgumentException if {@literal id} is {@literal null}.
-     */
+
     @Override
-    public Optional<Invoice> findById(Long aLong) {
-        return Optional.empty();
+    public Optional<Invoice> findById(Long s) {
+        throw new UnsupportedOperationException();
     }
 
-    /**
-     * Returns whether an entity with the given id exists.
-     *
-     * @param aLong must not be {@literal null}.
-     * @return {@literal true} if an entity with the given id exists, {@literal false} otherwise.
-     * @throws IllegalArgumentException if {@literal id} is {@literal null}.
-     */
-    @Override
-    public boolean existsById(Long aLong) {
-        return false;
-    }
 
+    @Override
+    public boolean existsById(Long s) {
+        throw new UnsupportedOperationException();
+    }
 }
