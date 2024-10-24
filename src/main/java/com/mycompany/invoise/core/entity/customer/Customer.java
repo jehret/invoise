@@ -1,8 +1,5 @@
 package com.mycompany.invoise.core.entity.customer;
 
-import com.mycompany.invoise.core.entity.customer.Address;
-
-
 import jakarta.persistence.*;
 
 @Entity
@@ -11,11 +8,11 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false,length = 50)
     private String name;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true, optional = false)
-    @JoinColumn(name = "ID_ADDRESS")
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL,orphanRemoval = true,optional = false)
+    @JoinColumn(name="ID_ADDRESS")
     private Address address;
 
     public Customer(String name) {
