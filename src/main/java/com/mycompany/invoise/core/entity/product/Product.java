@@ -3,7 +3,7 @@ package com.mycompany.invoise.core.entity.product;
 
 import com.mycompany.invoise.core.entity.product.Category;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 

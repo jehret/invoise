@@ -1,7 +1,7 @@
 package com.mycompany.invoise.core.entity.product;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 public class Category {
